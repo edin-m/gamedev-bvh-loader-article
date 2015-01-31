@@ -1,0 +1,9 @@
+Libraries can be found in lib subdirectory.
+
+GLEW
+If usual suspects don't work try this:
+    To compile glew type:
+        $ make -C auto
+    then
+        $ make
+    GLEW_DIR/lib should be filled with libraries

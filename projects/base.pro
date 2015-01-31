@@ -6,6 +6,7 @@ CONFIG -= qt
 DESTDIR = ../bin
 
 GIT_ROOT = $$PWD/..
+LIB_DIR  = $$GIT_ROOT/lib
 
 INCLUDEPATH += \
     $$PWD/../include \
@@ -25,7 +26,14 @@ QMAKE_CXXFLAGS += -std=c++11 -std=gnu++11
 QMAKE_LFLAGS += -std=c++11 -std=gnu++11
 
 unix {
-    LIBS += -L$$PWD/../lib/glew-1.10.0/glew-1.10.0/lib/ -lGLEW
+    #LIBS += -L$$PWD/../lib/glew-1.10.0/glew-1.10.0/lib/ -lGLEW
+    #LIBS += -lGL -lX11 -pthread
+
+    #GLEW
+    GLEW_DIR = $$LIB_DIR/glew
+    INCLUDEPATH += $$GLEW_DIR/include
+    LIBS += -L$$GLEW_DIR/lib/ -lGLEW
+
     LIBS += -lGL -lX11 -pthread
 }
 
