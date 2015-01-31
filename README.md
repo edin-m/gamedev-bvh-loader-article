@@ -30,6 +30,7 @@ You will need:
   - linux (check that graphics work with glxgears)
   - GLEW (see below for location)
   - qmake (comes with qt sdk and qt creator)
+  - glm (this is included in the repo include/ folder since it is header only library)
   
 qmake uses test1.pro to load and link libraries - only dependency being GLEW 
 which expects to find it in REPO_ROOT/lib/glew-1.10.0/glew-1.10.0/lib. This can be changed in test1.pro
