@@ -26,17 +26,24 @@ QMAKE_CXXFLAGS += -std=c++11 -std=gnu++11
 QMAKE_LFLAGS += -std=c++11 -std=gnu++11
 
 unix {
-    #LIBS += -L$$PWD/../lib/glew-1.10.0/glew-1.10.0/lib/ -lGLEW
-    #LIBS += -lGL -lX11 -pthread
 
     #GLEW
     GLEW_DIR = $$LIB_DIR/glew
     INCLUDEPATH += $$GLEW_DIR/include
     LIBS += -L$$GLEW_DIR/lib/ -lGLEW
 
+    #GLM
     INCLUDEPATH += $$LIB_DIR/glm
 
-    LIBS += -lGL -lX11 -pthread -lpthread
+    LIBS += -lGL -lX11
+
+    #GLFW - static library requires dependencies have put in right order
+    GLFW_DIR = $$LIB_DIR/glfw
+    INCLUDEPATH += $$GLFW_DIR/include
+    LIBS += -L$$GLFW_DIR/src/
+
+    LIBS += -lglfw3
+    LIBS += -lXxf86vm -lpthread -lXrandr -lXinerama -lXi -lXcursor
 }
 
 # include data files as OTHER_FILES
