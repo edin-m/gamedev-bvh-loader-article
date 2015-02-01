@@ -3,10 +3,10 @@ TEMPLATE = app
 CONFIG += console
 CONFIG -= qt
 
-DESTDIR = ../bin
-
 GIT_ROOT = $$PWD/..
 LIB_DIR  = $$GIT_ROOT/lib
+
+DESTDIR = $$GIT_ROOT/bin
 
 INCLUDEPATH += \
     $$PWD/../include \
@@ -36,9 +36,8 @@ unix {
 
     INCLUDEPATH += $$LIB_DIR/glm
 
-    LIBS += -lGL -lX11 -pthread
+    LIBS += -lGL -lX11 -pthread -lpthread
 }
-
 
 # include data files as OTHER_FILES
 include($$GIT_ROOT/data/data.pro)
