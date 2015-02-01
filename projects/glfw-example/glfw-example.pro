@@ -3,7 +3,6 @@ include(../base.pro)
 TARGET = glfw-example
 
 unix {
-#g++ deletethis.cc -I../include -L. -lglfw3 -lGL -lX11
 
     #GLFW
     GLFW_DIR = $$LIB_DIR/glfw
