@@ -34,6 +34,8 @@ unix {
     INCLUDEPATH += $$GLEW_DIR/include
     LIBS += -L$$GLEW_DIR/lib/ -lGLEW
 
+    INCLUDEPATH += $$LIB_DIR/glm
+
     LIBS += -lGL -lX11 -pthread
 }
 
