@@ -24,6 +24,29 @@ It's main function is to load bvh file and display it and play it. Paths are har
  - n frame forward
  - x frame backward
 
+Setup dependencies
+===
+```
+git submodule init lib/glm
+git submodule update lib/glm
+
+git submodule init lib/glew
+git submodule update lib/glew
+
+git submodule init lib/glfw
+git submodule update lib/glfw
+
+cd /.../lib/glew/auto
+make
+
+cd /.../lib/glew
+make
+
+cd /.../lib/glfw
+cmake .
+```
+
+
 Dependencies
 ===
 You will need:
