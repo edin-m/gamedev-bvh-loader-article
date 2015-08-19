@@ -46,5 +46,30 @@ unix {
     LIBS += -lXxf86vm -lpthread -lXrandr -lXinerama -lXi -lXcursor
 }
 
+win32 {
+
+    # GLEW
+    GLEW_DIR = $$LIB_DIR/glew-1.13.0
+    INCLUDEPATH += $$GLEW_DIR/include
+    LIBS += -L$$GLEW_DIR/bin/Release/Win32
+
+    # GLM
+    INCLUDEPATH += $$LIB_DIR/glm
+
+    # GLFW
+    GLFW_DIR = $$LIB_DIR/glfw
+    INCLUDEPATH += $$GLFW_DIR/include
+
+    release {
+        LIBS += -L$$GLFW_DIR/src/Release
+    }
+
+    debug {
+        LIBS += -L$$GLFW_DIR/src/Debug
+    }
+
+    LIBS += -glfw3
+}
+
 # include data files as OTHER_FILES
 include($$GIT_ROOT/data/data.pro)

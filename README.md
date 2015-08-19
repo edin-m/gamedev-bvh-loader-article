@@ -46,6 +46,30 @@ cd /.../lib/glfw
 cmake .
 ```
 
+### Windows
+
+Setup:
+
+ - cmake
+ - msys & git
+ - Visual studio (ex. 2015 express)
+
+##### GLFW
+
+```bash
+$ cd lib/glfw
+$ cmake -G "Visual Studio 14 2015" .
+```
+
+Open visual studio project ```lib/glfw/GLFW.sln``` or ```lib/glfw/src/Project.sln```
+and build ```Relase``` and ```Debug``` version which will be in ```lib/gflw/src/[Debug|Release]``` path
+
+##### GLEW
+
+For GLEW it is best to download binaries from official site.
+They are included in ```lib/glew-1.13.0``` but it is fixed version.
+You may want to change that.
+
 
 Dependencies
 ===

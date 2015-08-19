@@ -13,4 +13,8 @@ unix {
     LIBS += -lXxf86vm -lpthread -lXrandr -lXinerama -lXi -lXcursor
 }
 
+win32 {
+
+}
+
 SOURCES += main.cpp
