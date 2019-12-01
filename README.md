@@ -9,11 +9,11 @@ Licence
 
 Description
 ====
-!!!
+!!!!!!!!!!!!
 
 **This is Linux-only. To check out cross-platform version, use https://github.com/edin-m/gamedev-articles under `projects/bvh-loader`.**
 
-!!!
+!!!!!!!!!!!!
 
 Project is located under test1 folder (creative, I know). It is only supported on X11 (which means Linux). 
 It would be good to port it with GLFW to multiplatform.
